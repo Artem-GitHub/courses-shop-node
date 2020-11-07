@@ -90,7 +90,7 @@ router.post("/register", registerValidators, async (req, res) => {
 		});
 		await user.save();
 		res.redirect("/auth/login#login");
-		//await transporter.sendMail(regEmail(email));
+		await transporter.sendMail(regEmail(email));
 
 	}
 	catch(err) {
